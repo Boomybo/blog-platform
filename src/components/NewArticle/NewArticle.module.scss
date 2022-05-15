@@ -1,0 +1,107 @@
+@import '../../index.module.scss';
+
+.new-article-container {
+    width: 100%;
+    min-height: 90vh;
+    background-color: $background-color;
+    padding: 34px 0;
+}
+
+.new-article-form {
+    width: 938px;
+    margin: auto;
+    background-color: $base;
+    padding: 48px 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-article-header {
+    @include RobotoText();
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #262626;
+}
+
+.new-article-label {
+    display: flex;
+    flex-direction: column;
+    @include RobotoText();
+    @include fourteenFontTwentyTwoLine();
+    color: #262626;
+    margin-bottom: 21px;
+}
+
+.new-article-input {
+    border: 1px solid $light-gray;
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+.new-article-input::placeholder {
+    @include RobotoText();
+    font-size: 1.14rem;
+    line-height: 1.7rem;
+    color: #BFBFBF;
+}
+
+.new-article-textarea {
+    border: 1px solid $light-gray;
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+.new-article-textarea::placeholder{
+    @include RobotoText();
+    font-size: 1.14rem;
+    line-height: 1.7rem;
+    color: #BFBFBF;
+}
+
+.tags-add {
+    border: 1px solid $primary-color;
+    border-radius: 4px;
+    @include RobotoText();
+    font-size: 1.14rem;
+    line-height: 1.7rem;
+    color: $primary-color;
+}
+
+.new-article-send{
+    width: 319px;
+    height: 40px;
+    background: $primary-color;
+    border-radius: 4px;
+    @include RobotoText();
+    font-size: 1.14rem;
+    line-height: 1.7rem;
+    border: none;
+    margin-top: 29px;
+    color: $base;
+}
+
+.tags {
+    margin: 0;
+}
+
+.one-tag {
+    margin-bottom: 10px;
+}
+
+.tags-btn{
+    width: 120px;
+    height: 40px;
+    background-color: $base;
+}
+
+.tags-delete {
+    margin: 0 17px;
+    border: 1px solid $error;
+    border-radius: 4px;
+    @include RobotoText();
+    font-size: 1.14rem;
+    line-height: 1.7rem;
+    color: $error;
+}

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@500;600&family=Roboto:wght@400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+$heading-color: rgba(0, 0, 0, 0.85);
+$text-color: rgba(0, 0, 0, 0.75);
+$text-color-secondary: rgba(0, 0, 0, 0.5);
+$disabled-color:rgba(0, 0, 0, 0.35);
+$background-color: #EBEEF3;
+$primary-color:#1890FF;
+$success: #52C41A;
+$light-gray: #D9D9D9;
+$base: #fff;
+$error: #F5222D;
+$dark-gray: #595959;
+
+@mixin InterText {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin RobotoText {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin fourteenFontTwentyTwoLine {
+    font-size: 0.85rem;
+    line-height: 1.6rem;
+}
+
+.content-container {
+    padding: 1px 0;
+    background-color: $background-color;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    max-width: 941px;
+    margin: auto;
+}
+
+.articles {
+    margin-bottom: 30px;
+}
+
+.article {
+    background-color: #fff;
+    width: 941px;
+    height: 140px;
+    padding: 15px 19px 24px;
+    margin-top: 26px;
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+
+.article-content {
+    @include InterText();
+    @include fourteenFontTwentyTwoLine();
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.footer {
+    width: 300px;
+    margin: 30px  auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

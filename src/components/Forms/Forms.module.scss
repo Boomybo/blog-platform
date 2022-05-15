@@ -1,0 +1,135 @@
+@import '../../index.module.scss';
+
+.form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $light-gray;
+    box-shadow: 0px 22px 106px rgba(0, 0, 0, 0.07), 0px 9.19107px 44.2843px rgba(0, 0, 0, 0.0503198), 0px 4.91399px 23.6765px rgba(0, 0, 0, 0.0417275), 0px 2.75474px 13.2728px rgba(0, 0, 0, 0.035), 0px 1.46302px 7.04911px rgba(0, 0, 0, 0.0282725), 0px 0.608796px 2.93329px rgba(0, 0, 0, 0.0196802);
+    border-radius: 6px;
+    max-width: 384px;
+    min-height: 384px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 48px 30px;
+    background-color: $base;
+}
+
+
+
+.form-container {
+    background-color: $background-color;
+    width: 100%;
+    min-height: 90vh;
+    padding: 59px 0 59px;
+}
+
+
+.form-header {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-align: center;
+    margin-bottom: 21px;
+    color: #262626;
+}
+
+.form-label {
+   @include RobotoText();
+    @include fourteenFontTwentyTwoLine();
+    margin-bottom: 14px;
+}
+
+.form-label:active{
+    border: none
+}
+
+.form-input {
+    border: 1px solid $light-gray;
+    border-radius: 4px;
+    width: 320px;
+    padding: 8px 12px;
+}
+
+.form-input::placeholder {
+    @include RobotoText();
+    font-size: 1.14rem;
+    line-height: 1.7rem;
+    display: flex;
+    align-items: center;
+    color: #BFBFBF;
+}
+
+.form-label:nth-of-type(4)::after {
+    content: '';
+    display: block;
+    width: 320px;
+    height: 1px;
+    border: 1px solid $background-color;
+    margin: 20px 0 0px;
+}
+
+.form-label-checkbox {
+    display: flex;
+}
+
+.form-agreement {
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+}
+
+.form-agreement__check-box {
+    @include RobotoText();
+    @include fourteenFontTwentyTwoLine();
+    display: block;
+    color: $dark-gray;
+    margin-left: 8px;
+}
+
+.form-input:focus {
+    outline: 1px black solid;
+}
+
+.red {
+    border-color: $error;
+}
+
+.red:focus {
+    outline: none;
+}
+
+.form-submit-btn {
+    background: $primary-color;
+    border-radius: 4px;
+    width: 319px;
+    height: 40px;
+    @include RobotoText();
+    font-size: 1.14rem;
+    line-height: 1.7rem;
+    border: none;
+    margin: 5px 0 8px;
+    text-align: center;
+    color: $base;
+}
+
+.form-note {
+    @include RobotoText();
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+    text-align: center;
+    color: #8C8C8C;
+}
+
+.required {
+    @include RobotoText();
+    @include fourteenFontTwentyTwoLine();
+    line-height: 22px;
+    color: $error;
+}
+
+.form-label-checkbox--req {
+    color: $error;  
+}

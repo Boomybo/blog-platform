@@ -1,0 +1,96 @@
+@import '../../index.module.scss';
+
+.article-header {
+    display: flex;
+    justify-content: space-between;
+}
+.article-info {
+    display: flex;
+    align-items: center;
+}
+
+.article-title {
+    @include InterText();
+    font-size: 1.4rem;
+    line-height: 2rem;
+    display: flex;
+    align-self: center;
+    color: $primary-color;
+    margin-right: 13px;
+    margin-bottom: 5px;
+}
+
+.like-counter {
+    @include InterText();
+    @include fourteenFontTwentyTwoLine();
+    color: rgba(0, 0, 0, 0.75);
+    margin-left: 5px;
+}
+
+.article-profile-info-container{
+    display: flex;
+}
+
+.article-profile-info {
+    margin-right: 12px;
+}
+
+.article-profile-name {
+    @include InterText();
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: $heading-color;
+    margin-bottom: 0;
+}
+
+.article-date {
+    @include InterText();
+    @include fourteenFontTwentyTwoLine();
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.tag {
+    border: 1px solid $text-color-secondary;
+    box-sizing: border-box;
+    border-radius: 2px;
+    padding: 2px 6px 3px 5px;
+    background-color: $base;
+    @include InterText();
+    font-size: 0.85rem;
+    line-height: 15px;
+    margin-right: 8px;
+    color: $text-color-secondary;
+
+}
+
+.article-profile-img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+}
+
+.filter-label {
+    display: flex;
+    cursor: pointer;
+}
+
+.check__box {
+    content: url('../../Vector.svg');
+    display: block;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+
+.article-header-label-input {
+    position: absolute;
+    appearance: none;
+}
+.article-header-label-input:checked + .check__box{
+    display: block;
+    content: url('../../path4.svg');
+}

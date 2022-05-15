@@ -1,0 +1,106 @@
+@import '../../index.module.scss';
+
+.article-page-container {
+    background-color: $background-color;
+    padding: 25px 0;
+
+}
+
+.article-page {
+    max-width: 937px;
+    margin: auto;
+    padding: 20px;
+    background-color: $base;
+    min-height: 83vh;
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+.author-desc {
+    display: flex;
+    justify-content: space-between;
+    min-height: 45px;
+}
+
+.article-description {
+    @include InterText();
+    @include fourteenFontTwentyTwoLine();
+    color: rgba(0, 0, 0, 0.5);
+    max-width: 682px;
+}
+
+.modal-window {
+    width: 240px;
+    height: 104px;
+    position: absolute;
+    top: 0px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    left: 150px;
+    padding: 12px 16px;
+    filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.15));
+}
+
+.modal-message {
+    display: flex;
+    align-items: flex-start;
+    @include RobotoText();
+    @include fourteenFontTwentyTwoLine();
+    color: $dark-gray;
+}
+
+.modal-icon {
+    margin-top: 3px;
+    margin-right: 9px;
+}
+
+.modal-btns {
+    display: flex;
+    justify-content: end;
+}
+
+.modal-btn {
+    padding: 1px 8px;
+    background-color: $base;
+    border: 1px solid $light-gray;
+    border-radius: 4px;
+}
+
+.modal-btn-cancel {
+    margin-right: 10px;
+}
+
+.modal-btn-submit {
+    background: $primary-color;
+    border-radius: 4px;
+    @include RobotoText();
+    @include fourteenFontTwentyTwoLine();
+    color: $base;
+}
+
+.edit {
+    @include InterText;
+    @include fourteenFontTwentyTwoLine();
+    color: $success;
+    border: 1px solid $success;
+    border-radius: 5px;
+    }
+
+.author-btns {
+    position: relative;
+}
+
+.tags-btn{
+    width: 120px;
+    height: 40px;
+    background-color: $base;
+}
+
+.tags-delete {
+    margin: 0 17px;
+    border: 1px solid $error;
+    border-radius: 4px;
+    @include RobotoText();
+    font-size: 1.15rem;
+    line-height: 1.7rem;
+    color: $error;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ArticlesHeader from '../ArticlesHeader/ArticlesHeader';
+import ArticlesHeader from '../ArticlesHeader';
 import styles from '../../index.module.scss';
 
 const MiniArticle = (props) => {

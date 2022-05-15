@@ -1,9 +1,9 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-import SignUp from '../SignUp/SignUp';
-import SignIn from '../SignIn/SignIn';
-import EditProfile from '../EditProfile/EditProfile';
+import SignUp from '../SignUp';
+import SignIn from '../SignIn';
+import EditProfile from '../EditProfile';
 
 const Forms = () => {
   const location = useLocation();

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import * as actions from '../../actions/actions';
-import MiniArticle from '../MiniArticle/MiniArticle';
+import MiniArticle from '../MiniArticle';
 import styles from '../../index.module.scss';
 
 const ArticlesList = ({

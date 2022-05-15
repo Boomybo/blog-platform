@@ -7,7 +7,7 @@ import classNames from 'classnames';
 
 import icon from '../../Vector1.svg';
 import * as actions from '../../actions/actions';
-import ArticlesHeader from '../ArticlesHeader/ArticlesHeader';
+import ArticlesHeader from '../ArticlesHeader';
 
 import styles from './ArticlePage.module.scss';
 

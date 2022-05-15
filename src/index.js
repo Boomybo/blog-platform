@@ -6,7 +6,7 @@ import thunk from 'redux-thunk';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import './index.module.scss';
-import App from './components/App/App';
+import App from './components/App';
 import rootReducer from './store/reducer';
 import { fetchArticles } from './actions/actions';
 

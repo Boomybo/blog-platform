@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import 'antd/dist/antd.css';
 import { Route } from 'react-router-dom';
 
-import Header from '../Header/Header';
-import ArticlesList from '../ArticlesList/ArticlesList';
-import ArticlePage from '../ArticlePage/ArticlePage';
+import Header from '../Header';
+import ArticlesList from '../ArticlesList';
+import ArticlePage from '../ArticlePage';
 import * as actions from '../../actions/actions';
-import Forms from '../Forms/Forms';
-import NewArticle from '../NewArticle/NewArticle';
+import Forms from '../Forms';
+import NewArticle from '../NewArticle';
 
 const App = () => {
   return (

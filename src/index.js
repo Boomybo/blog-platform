@@ -7,8 +7,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import './index.module.scss';
 import App from './components/App';
-import rootReducer from './store/reducer';
-import { fetchArticles } from './actions/actions';
+import rootReducer from './redux/store/reducer';
+import { fetchArticles } from './redux/actions/actions';
 
 const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 

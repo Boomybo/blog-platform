@@ -77,7 +77,7 @@
 }
 
 .check__box {
-    content: url('../../Vector.svg');
+    content: url('../../assets/images/Vector.svg');
     display: block;
     width: 20px;
     height: 20px;
@@ -92,5 +92,5 @@
 }
 .article-header-label-input:checked + .check__box{
     display: block;
-    content: url('../../path4.svg');
+    content: url('../../assets/images/path4.svg');
 }

@@ -3,7 +3,7 @@ import { format } from 'date-fns';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import * as actions from '../../actions/actions';
+import * as actions from '../../redux/actions/actions';
 
 import styles from './ArticlesHeader.module.scss';
 
@@ -25,27 +25,26 @@ const ArticlesHeader = (props) => {
     loggedState,
   } = props;
 
-  const token = loggedState.data ? loggedState.data.token : null;
+  const token = loggedState.data && loggedState.data.token;
 
   const username = authorInfo ? authorInfo.username : author.username;
 
   const image = authorInfo ? authorInfo.image : author.image;
 
-  const tags = () => {
+  const Tags = () => {
     if (!tagList || tagList.length === 0) {
       return;
-    } else {
-      return tagList.map((tag, index) => {
-        if (!tag) {
-          return;
-        }
-        return (
-          <button className={styles.tag} key={index}>
-            {tag}
-          </button>
-        );
-      });
     }
+    return tagList.map((tag, index) => {
+      if (!tag) {
+        return;
+      }
+      return (
+        <button className={styles.tag} key={index}>
+          {tag}
+        </button>
+      );
+    });
   };
 
   const onChange = (e) => {
@@ -93,7 +92,9 @@ const ArticlesHeader = (props) => {
           </label>
           <div className={styles['like-counter']}></div>
         </div>
-        <div className={styles.tags}>{tags()}</div>
+        <div className={styles.tags}>
+          <Tags />
+        </div>
       </div>
       <div className={styles['article-profile-info-container']}>
         <div className={styles['article-profile-info']}>

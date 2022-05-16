@@ -4,12 +4,12 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import classNames from 'classnames';
 
-import * as actions from '../../actions/actions';
+import * as actions from '../../redux/actions/actions';
 import styles from '../Forms/Forms.module.scss';
 
 const EditProfile = ({ postUpdate, loggedState, getError }) => {
-  const username = loggedState.data ? loggedState.data.username : null;
-  const email = loggedState.data ? loggedState.data.email : null;
+  const username = loggedState.data && loggedState.data.username;
+  const email = loggedState.data && loggedState.data.email;
 
   const {
     register,

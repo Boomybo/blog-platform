@@ -5,9 +5,7 @@ import { Redirect, Link } from 'react-router-dom';
 import classNames from 'classnames';
 
 import styles from '../Forms/Forms.module.scss';
-import * as actions from '../../actions/actions';
-
-console.log(styles);
+import * as actions from '../../redux/actions/actions';
 
 const SignUp = ({ postNewUser, loggedState, getError }) => {
   const {
@@ -20,6 +18,11 @@ const SignUp = ({ postNewUser, loggedState, getError }) => {
   if (loggedState.isLogged) {
     return <Redirect to="/"></Redirect>;
   }
+
+  const disabled =
+    watch('username') && watch('email') && watch('password') && watch('passwordRepeat') && watch('allow')
+      ? true
+      : false;
 
   return (
     <div className={styles['form-container']}>
@@ -132,7 +135,7 @@ const SignUp = ({ postNewUser, loggedState, getError }) => {
           <span className={styles['form-agreement__check-box']}></span>I agree to the processing of my personal
           information
         </label>
-        <button type="submit" className={styles['form-submit-btn']}>
+        <button type="submit" className={styles['form-submit-btn']} disabled={!disabled}>
           Create
         </button>
         <p className={styles['form-note']}>

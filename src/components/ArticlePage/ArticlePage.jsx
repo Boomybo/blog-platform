@@ -5,8 +5,8 @@ import ReactMarkdown from 'react-markdown';
 import { Spin } from 'antd';
 import classNames from 'classnames';
 
-import icon from '../../Vector1.svg';
-import * as actions from '../../actions/actions';
+import icon from '../../assets/images/Vector1.svg';
+import * as actions from '../../redux/actions/actions';
 import ArticlesHeader from '../ArticlesHeader';
 
 import styles from './ArticlePage.module.scss';
@@ -21,8 +21,8 @@ const ArticlePage = ({
   newArticle,
   setNewArticle,
 }) => {
-  const token = loggedState.data ? loggedState.data.token : null;
-  const username = oneArticle ? oneArticle.author.username : null;
+  const token = loggedState.data && loggedState.data.token;
+  const username = oneArticle && oneArticle.author.username;
 
   useEffect(() => {
     if (newArticle) {

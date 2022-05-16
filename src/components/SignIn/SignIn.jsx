@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import classNames from 'classnames';
 
 import styles from '../Forms/Forms.module.scss';
-import * as actions from '../../actions/actions';
+import * as actions from '../../redux/actions/actions';
 
 const SignIn = ({ getError, postExitingUser, loggedState, fetchArticles }) => {
   const {

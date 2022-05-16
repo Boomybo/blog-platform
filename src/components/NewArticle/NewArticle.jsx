@@ -4,7 +4,7 @@ import { useFieldArray, useForm } from 'react-hook-form';
 import { Redirect, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 
-import * as actions from '../../actions/actions';
+import * as actions from '../../redux/actions/actions';
 
 import styles from './NewArticle.module.scss';
 
@@ -20,9 +20,9 @@ const NewArticle = ({
   const location = useLocation();
   let pathIncludesEdit = location.pathname.includes('edit');
 
-  const defVal = pathIncludesEdit ? oneArticle.tagList.map((val) => ({ oneTag: val })) : null;
+  const defVal = pathIncludesEdit && oneArticle.tagList.map((val) => ({ oneTag: val }));
 
-  const token = loggedState.isLogged ? loggedState.data.token : null;
+  const token = loggedState.isLogged && loggedState.data.token;
 
   const initial = pathIncludesEdit ? defVal : [{ oneTag: '' }];
 

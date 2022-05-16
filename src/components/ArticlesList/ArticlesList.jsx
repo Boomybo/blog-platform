@@ -3,7 +3,7 @@ import { Pagination, Spin } from 'antd';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import * as actions from '../../actions/actions';
+import * as actions from '../../redux/actions/actions';
 import MiniArticle from '../MiniArticle';
 import styles from '../../index.module.scss';
 
@@ -17,7 +17,7 @@ const ArticlesList = ({
   history,
   loggedState,
 }) => {
-  const token = loggedState.data ? loggedState.data.token : null;
+  const token = loggedState.data && loggedState.data.token;
 
   const visibleArticles = articles.map((element) => {
     return (

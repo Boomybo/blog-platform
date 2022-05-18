@@ -1,6 +1,8 @@
+import { ERROR } from '../actionTypes';
+
 export const receiveError = (err) => {
   return {
-    type: 'ERROR',
+    type: ERROR,
     err,
   };
 };

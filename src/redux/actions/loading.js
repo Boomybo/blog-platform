@@ -1,6 +1,8 @@
+import { LOADING } from '../actionTypes';
+
 export const loading = (loader) => {
   return {
-    type: 'LOADING',
+    type: LOADING,
     loader,
   };
 };

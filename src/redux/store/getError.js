@@ -1,6 +1,8 @@
+import { ERROR } from '../actionTypes';
+
 export function getError(state = false, action) {
   switch (action.type) {
-    case 'ERROR':
+    case ERROR:
       return action.err;
     default:
       return state;

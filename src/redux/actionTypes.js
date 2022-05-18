@@ -1,0 +1,12 @@
+export const RECEIVED_ARTICLES = 'RECEIVED_ARTICLES';
+export const FAVORITED_ARTICLES = 'FAVORITED_ARTICLES';
+export const ERROR = 'ERROR';
+export const LOADING = 'LOADING';
+export const LOGGED = 'LOGGED';
+export const UNLOGGED = 'UNLOGGED';
+export const MODAL = 'MODAL';
+export const SET_NEW_ARTICLE = 'SET_NEW_ARTICLE';
+export const RECEIVED_ARTICLE = 'RECEIVED_ARTICLE';
+export const DELETE_ONE_ARTICLE = 'DELETE_ONE_ARTICLE';
+export const SET_PAGE_NUMBER = 'SET_PAGE_NUMBER';
+export const SET_TOTAL_PAGES = 'SET_TOTAL_PAGES';

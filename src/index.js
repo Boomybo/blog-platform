@@ -26,9 +26,6 @@ store.subscribe(() => {
   localStorage.setItem('reduxState', JSON.stringify(store.getState()));
 });
 
-// const localStorageState = localStorage.getItem('reduxState') ? JSON.parse(localStorage.getItem('reduxState')) : null;
-// const token = localStorageState.loggedState.isLogged ? localStorageState.loggedState.data.token : null;
-
 store.dispatch(fetchArticles(0));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
